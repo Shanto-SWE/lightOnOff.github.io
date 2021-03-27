@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light on and off</title>
+</head>
+<style>
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: beige;
+    }
+    .main-container{
+        width: 450px;
+        height: 400px;
+        background-color:#fff;
+    }
+    button{
+        font-size: 20px;
+        padding: 10px 3px;
+        border-radius: 7px;
+        outline: none;
+        background-color: yellow;
+    }
+    h1{
+        font-size: 20px;
+    }
+    img{
+        width: 200px;
+        height: 300px;
+    }
+</style>
+<body>
+    <div class="main-container">
+        <h1>You can turn on and off the light </h1>
+        <button onclick="lighton()" id="onbtn">On the light</button>
+        <img src="img/OFFbulb.jpg" alt="">
+        <button onclick="lightoff()" id="offbtn">Off the light</button>
+    </div>
+
+    <script>
+
+const img=document.querySelector("img")
+
+const lighton=()=>{
+    img.src="img/ONbulb.jpg";
+}
+
+const lightoff=()=>{
+    img.src="img/OFFbulb.jpg";
+};
+
+
+    </script>
+</body>
+</html>

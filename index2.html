@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <title>Thermometer</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body{
+        background-color:thistle;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        font-size: 120px;
+        color: white;
+    }
+    span{
+        color: black;
+    
+    }
+ 
+</style>
+<body>
+   
+        <div class="main-div">
+          <h1>I am <br>Thermometer <span id="Thermometer" class="fa"></span></h1>
+        
+        </div>
+  
+  <script>
+const loadther=()=>{
+    let team=document.getElementById("Thermometer");
+    team.innerHTML='&#xf2cb';
+    team.style.color="black"
+
+    setTimeout(()=>{
+        team.innerHTML="&#xf2ca"
+        team.style.color="yellow"
+    },1000)
+    setTimeout(()=>{
+        team.innerHTML="&#xf2c9"
+    },2000)
+
+    setTimeout(()=>{
+        team.innerHTML="&#xf2c8"
+    },3000)
+    setTimeout(()=>{
+        team.innerHTML="&#xf2c7"
+        team.style.color="red"
+    },4000)
+}
+
+loadther();
+setInterval(() => {
+    loadther()
+}, 5000);
+
+  </script>
+</body>
+</html>
